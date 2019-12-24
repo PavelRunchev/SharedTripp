@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/global-errors/global-errors.css" type="text/css" rel="stylesheet">
+     <!--TODO: CHANGE-->
+    <title>Page Title</title>
+</head>
+
+<body>
+    {{> navigation}}
+
+    {{#if flash}}
+            {{#if flash.info}}
+            <h2 class="info-msg">{{flash.info}}</h2>
+            {{/if}}
+            {{#if flash.success}}
+            <h2 class="success-msg">{{flash.success}}</h2>
+            {{/if}}
+            {{#if flash.warning}}
+            <h2 class="warning-msg">{{flash.warning}}</h2>
+            {{/if}}
+            {{#if flash.danger}}
+            <h2 class="danger-msg">{{flash.danger}}</h2>
+            {{/if}}
+    {{/if}}
+
+    {{{body}}}
+
+    {{> footer}}
+</body>
+
+</html>
+
+
+
+
