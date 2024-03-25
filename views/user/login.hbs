@@ -1,0 +1,31 @@
+
+{{#if globalError}}
+     <section
+        style="background-color:#F08080; padding: 1%; border-radius: 6px; width: 50%; margin: 0 auto; margin-top: 5%;">
+        <p style="text-align: center; font-style: italic; font-size: 18px;">{{globalError}}</p>
+    </section>
+{{/if}}
+   
+
+ <section class="py-5">
+        <div class="container">
+            <h1 style="margin: 2%; text-align: center;">Login</h1>
+            <div style="padding: 5%;">
+                <form action="/user/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" value="{{email}}" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" value="{{password}}" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <p>Not registered yet? <a href="/user/register">Register Now!</a></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>

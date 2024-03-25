@@ -1,0 +1,41 @@
+
+
+{{#if globalError}}
+     <section
+        style="background-color:#F08080; padding: 1%; border-radius: 6px; width: 50%; margin: 0 auto; margin-top: 5%;">
+        <p style="text-align: center; font-style: italic; font-size: 18px;">{{globalError}}</p>
+    </section>
+{{/if}}
+
+    <section class="py-5">
+        <div class="container">
+            <h1 style="margin: 2%; text-align: center;">Offer Tripp</h1>
+            <div style="padding: 5%;">
+                <form action="/tripp/tripp-create" method="POST">
+                    <div class="form-group">
+                        <label for="startAndEndPoint">Starting Point - End Point</label>
+                        <input type="text" name="startAndEndPoint" value="{{startAndEndPoint}}" class="form-control" id="startAndEndPoint" aria-describedby="emailHelp"
+                            placeholder="Studentski grad - Pamporovo">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateTime">Date - Time</label>
+                        <input type="text" name="dateTime" value="{{dateTime}}" class="form-control" id="dateTime" placeholder="29 December 2019 - 19:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="carImage">Car Image</label>
+                        <input type="text" name="carImage" value="{{carImage}}" class="form-control" id="carImage" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label for="seats">Seats</label>
+                        <input min="1" max="6" name="seats" value="{{seats}}" type="number" class="form-control" id="seats" placeholder="4...">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" value="{{description}}" class="form-control" id="description"
+                            placeholder="Price, Car information...">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
